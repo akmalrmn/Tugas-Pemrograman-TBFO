@@ -1,0 +1,14 @@
+Q P F # total states
+a # input word symbols
+Z Y # stack symbols
+Q # starting state
+Z # starting stack
+F # accepting states
+F # E - accepts with an empty stack or F - accepts with an accepting state
+Q a Z Q YZ # list of productions (current state, read from word, take from stack, next state, add to stack)
+Q a Y Q YY
+Q e Z P Z
+Q e Y P e 
+P a Z P e 
+P a Y P e
+P e Z F e
