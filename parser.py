@@ -5,22 +5,14 @@ def parse_pda_definition(file_path):
     with open(file_path, 'r') as file:
         lines = file.readlines()
 
-    pda = {
-    'states': {'q0', 'q1', 'q2', 'q3'},
-    'input_symbols': {'<tag>', '</tag>'},
-    'stack_symbols': {'Z', '<tag>'},
-    'start_state': 'q0',
-    'start_stack': 'Z',
-    'accept_states': {'q0'},
-    'accept_condition': 'E',
-    'transitions': {
-        ('q0', '<tag>', 'Z'): [('q1', '<tag>')],
-        ('q1', '<tag>', '<tag>'): [('q1', '<tag>'), ('q1', '<tag>')],
-        ('q1', '</tag>', '<tag>'): [('q2', 'e')],
-        ('q2', '</tag>', '<tag>'): [('q2', 'e')],
-        ('q2', 'e', 'Z'): [('q0', 'Z')],
-    }
-}
+    pda = {'states': set(lines[0].strip().split()),
+           'input_symbols': set(lines[1].strip().split()),
+           'stack_symbols': set(lines[2].strip().split()),
+           'start_state': lines[3].strip(),
+           'start_stack': lines[4].strip(),
+           'accept_states': set(lines[5].strip().split()),
+           'accept_condition': lines[6].strip(),
+           'transitions': {}}
 
     for line in lines[7:]:
       state, symbol, stack_top, *rest = line.strip().split()
