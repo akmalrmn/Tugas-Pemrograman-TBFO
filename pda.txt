@@ -1,14 +1,117 @@
-Q P F # total states
-a # input word symbols
-Z Y # stack symbols
-Q # starting state
+q1 q2 q3 q4 q5 q6 q7 q8 q9 q10 q11 q12 q13 q14 q15 q16 q17 q18 q19 q20 q21 q22 q23 q24 q25 q26 q27 q28 q29 q30 q31 q32 q33 q34 q35 q36 q37 q38 q39 q40 q41 q42 q43 q44 q45 q46 q47 q48 q49 q50 q51 q52 q53 q54 q55 q56 q57 q58 q9 q60 q61 q62 q63 q64 q65 q66 q67 q68 q69 # total states
+>, />, ", <html>, </html>, <head>, </head>, <title>, </title>, <script, src, </script>, <link, rel, href, <body>, </body>, <img, src, alt, <input, type, "password", "text", <h1>, </h1>, <h2>, </h2>, <h3>, </h3>, <h4>, </h4>, <h5>, </h5>, <h6>, </h6>, <em>, </em>, <b>, </b>, <abbr>, </abbr>, <strong>, </strong>, <small>, </small>, <a, ref, </a>, <button, type, "submit, "reset", "button", </button>, <form, action, "GET", "POST", method, </form>, <table>, </table>, <tr>, </tr>, <th>, </th>, <td>, </td>, <br/>, <hr/>, <div>, </div> # input word symbols
+e, html,head, title, script, src, link, rel, href, body, img, alt, input, type, h1, h2, h3, h4, h5, h6, em, b, abbr, strong, small, a, ref, button, form, action, method, table, tr, th, td, br, hr, div # stack symbols
+q1 # starting state
 Z # starting stack
-F # accepting states
-F # E - accepts with an empty stack or F - accepts with an accepting state
-Q a Z Q YZ # list of productions (current state, read from word, take from stack, next state, add to stack)
-Q a Y Q YY
-Q e Z P Z
-Q e Y P e 
-P a Z P e 
-P a Y P e
-P e Z F e
+q7 # accepting states
+q7 # E - accepts with an empty stack or F - accepts with an accepting state
+q1 <html> e q2 html # list of productions (current state, read from word, take from stack, next state, add to stack)
+q2 <head> e q3 head
+q3 </head> head q4 e 
+q4 <body> e q5 body
+q5 </body> body q6 e 
+q6 </html> html q7 e 
+q3 <link e q8 link 
+q8 rel rel q9 rel 
+q9 " e q10 "
+q10 " " e q11
+q11 href href q12 href
+q12 " e q13 "
+q13 " " q11 e  
+q11 /> link q3 e 
+q3 <title> e q14 title 
+q14 </title> title q3 e 
+q3 <script e q15 script 
+q15 > e q16 e 
+q16 </script> script q3 e 
+q15 src src q17 src 
+q17 " e q18 " 
+q18 " " q19 e 
+q19 > e q20 e 
+q20 </script> script q3 e
+q5 <link e q21 link 
+q21 rel rel q22 rel 
+q22 " e q23 " 
+q23 " " q24 e
+q24 /> link q5 e 
+q24 href href q25 href 
+q25 " e q26 " 
+q26 " " q24 e 
+q5 <script e q27 script
+q27 > e q28 e 
+q28 </script> script q5 e 
+q27 src src q29 src
+q29 " e q30 " 
+q30 " " q31 e 
+q31 > e q32 e 
+q32 </script> script q5 e 
+q5 <div> e q5 div
+q5 </div> div q5 e 
+q5 <hr/> hr q5 hr 
+q5 <br/> br q5 br 
+q5 <img e q34 img 
+q34 src src q35 src 
+q35 " e  q36 " 
+q36 " " q39 e 
+q39 /> img q5 e 
+q39 alt alt q37 alt
+q39 " e q38 " 
+q38 " " q39 e
+q5 <input e q40 input
+q40 type type q41 type 
+q41 "password" e q40 e 
+q41 "text" e q40 e
+q40 /> input q5 e 
+q5 <h1> e q42 h1 
+q42 </h1> h1 q5 e 
+q5 <h2> e q43 h2 
+q43 </h2> h2 q5 e  
+q5 <h3> e q44 h3
+q44 </h3> h3 q5 e 
+q5 <h4> e q45 h4 
+q45 </h4> h4 q5 e 
+q5 <h5> e q46 h5 
+q46 </h5> h5 q5 e 
+q5 <h6> e q47 h6
+q47 </h6> h6 q5 e 
+q5 <p> e q48 p 
+q48 </p> p q5 e 
+q5 <em> e q49 em
+q49 </em> em q5 e 
+q5 <b> e q50 b 
+q50 </b> b q5 e 
+q5 <abbr> e q51 abbr 
+q51 </abbr> abbr q5 e 
+q5 <strong> e q52 strong 
+q52 </strong> strong q5 e 
+q5 <small> e q53 small 
+q53 </small> small q5 e 
+q5 <a e q54 a 
+q54 ref ref q55 ref 
+q55 " e q56 " 
+q56 " " q54 e 
+q54 > e q57 e 
+q57 </a> a q5 e 
+q5 <button e q58 button 
+q58 type type q59 type 
+q59 "submit" e q58 e
+q59 "reset" e q58 e
+q59 "button" e q58 e
+q58 > e q60 e 
+q60 </button> button q5 e 
+q5 <form e q61 form 
+q61 action action q62 action 
+q62 "GET" e q61 e 
+q62 "POST" e q61 e 
+q61 method method q64 method
+q64 " e q63 "
+q63 " " q61 e
+q61 > e q65 e 
+q65 </form> form q5 e 
+q5 <table> e q66 table 
+q66 <tr> e q67 tr 
+q67 </tr> tr q66 e 
+q66 <th> e q68 th 
+q68 </th> th q66 e 
+q66 <td> e q69 td 
+q69 </td> td q69 e 
