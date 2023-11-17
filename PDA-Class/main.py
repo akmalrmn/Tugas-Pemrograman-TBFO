@@ -39,7 +39,7 @@ class PDA:
             self.transitions[state] = []
 
         configuration = (input_symbol, stack_symbol, push_stack, next_state)
-        configuration = tuple(s if s != "e" else "" for s in configuration)
+        configuration = tuple(s if s != "~" else "" for s in configuration)
 
         self.transitions[state].append(configuration)
     
@@ -133,7 +133,7 @@ class PDA:
         return moves
     
     def process_input(self):
-        self.start_input = input("Please enter your word:\n")
+        self.start_input = "<html><head><head><body></body></html>"
         print("Checking word \"" + self.start_input + "\" ...")
 
         while self.start_input != "end":
@@ -149,6 +149,7 @@ class PDA:
             print("Checking word \"" + self.start_input + "\" ...")
 
 
-pda_instance = PDA("test.txt")
+pda_instance = PDA("pda.txt")
+print(pda_instance.transitions)
 pda_instance.process_input()
 
