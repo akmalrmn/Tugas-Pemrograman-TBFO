@@ -1,4 +1,4 @@
-HTML /HTML HEAD /HEAD BODY /BODY P /P
+MAIN HTML /HTML HEAD /HEAD BODY /BODY TRANSITION ANY P /P EM /EM TEMPH H1 /H1 H2 /H2 H3 /H3 H4 /H4 H5 /H5 H6 /H6 HR TEMPB BUTTON /BUTTON BR TEMPS STRONG /STRONG SMALL /SMALL DIV /DIV TEMPA A A/ ABBR /ABBR TEMPI IMG INPUT FORM /FORM TABLE /TABLE TEMPT TR /TR TD /TD TH /TH TEMPTT  
 < > / a b c d e f g h i j k l m n o p q r s t u v w x y z 1 2 3 4 5 6
 < > / a b c d e f g h i j k l m n o p q r s t u v w x y z 1 2 3 4 5 6 Z
 MAIN
@@ -60,32 +60,32 @@ ANY e e /EM ~
 /EM m m /EM ~
 /EM > > TRANSITION ~
 TRANSITION h / TEMPH </
-TEMPH 1 < H1 ></h1>
+TEMPH 1 < H1 ></h1><
 H1 > > ANY ~
 ANY h h /H1 ~
 /H1 1 1 /H1 ~
 /H1 > > TRANSITION ~
-TEMPH 2 < H2 ></h2>
+TEMPH 2 < H2 ></h2><
 H2 > > ANY ~
 ANY h h /H2 ~
 /H2 2 2 /H2 ~
 /H2 > > TRANSITION ~
-TEMPH 3 < H3 ></h3>
+TEMPH 3 < H3 ></h3><
 H3 > > ANY ~
 ANY h h /H3 ~
 /H3 3 3 /H3 ~
 /H3 > > TRANSITION ~
-TEMPH 4 < H4 ></h4>
+TEMPH 4 < H4 ></h4><
 H4 > > ANY ~
 ANY h h /H4 ~
 /H4 4 4 /H4 ~
 /H4 > > TRANSITION ~
-TEMPH 5 < H5 ></h5>
+TEMPH 5 < H5 ></h5><
 H5 > > ANY ~
 ANY h h /H5 ~
 /H5 5 5 /H5 ~
 /H5 > > TRANSITION ~
-TEMPH 6 < H6 ></h6>
+TEMPH 6 < H6 ></h6><
 H6 > > ANY ~
 ANY h h /H6 ~
 /H6 6 6 /H6 ~
@@ -93,11 +93,11 @@ ANY h h /H6 ~
 TEMPH r < HR /><
 HR / / HR ~
 HR > > TRANSITION ~ 
-TRANSITION b / TEMPB </
+TRANSITION b / TEMPB ></
 TEMPB > > ANY ~
-ANY b b /TEMPB ></
-/TEMPB > > TRANSITION ~
-TEMPB u / BUTTON tton></button></
+ANY b b /B ></b
+/B > > TRANSITION ~
+TEMPB u > BUTTON tton></button>
 BUTTON t t BUTTON ~
 BUTTON o o BUTTON ~
 BUTTON n n BUTTON ~
@@ -108,7 +108,7 @@ ANY b b /BUTTON ~
 /BUTTON o o /BUTTON ~
 /BUTTON n n /BUTTON ~
 /BUTTON > > TRANSITION ~
-TEMPB r < BR /><
+TEMPB r > BR  />
 BR / / BR ~
 BR > > TRANSITION ~
 TRANSITION s / TEMPS </
@@ -125,7 +125,7 @@ ANY s s /STRONG ~
 /STRONG n n /STRONG ~
 /STRONG g g /STRONG ~
 /STRONG > > TRANSITION ~
-TEMPS m / SMALL all></small>
+TEMPS m < SMALL all></small><
 SMALL a a SMALL ~
 SMALL l l SMALL ~
 SMALL > > ANY ~
@@ -142,8 +142,11 @@ ANY d d /DIV ~
 /DIV i i /DIV ~
 /DIV v v /DIV ~
 /DIV > > TRANSITION ~
-TRANSITION a / TEMPA </ {/* STATE MEMILIH */}
-TEMPA b < ABBR br></abbr><
+TRANSITION a / TEMPA ></
+TEMPA > > ANY ~
+ANY a b /A ></b
+/A > > TRANSITION ~
+TEMPA b > ABBR br></abbr>
 ABBR b b ABBR ~
 ABBR r r ABBR ~
 ABBR > > ANY ~
@@ -183,18 +186,20 @@ TEMPT t / TEMPT ~
 TEMPT r t TR ></tr></t
 TR > > ANY ~
 ANY t t TEMPTT ~
-TEMPTT r r TR ~
-TR > > TR ~
-TR < < TR ~
-TR / / /TABLE ~
-TEMPTT d d TD ~
-TD > > TD ~
-TD < < TD ~
-TD / / /TABLE ~
-TEMPTT h h TH ~
-TH > > TH ~
-TH < < TH ~
-TH / / /TABLE ~
+TEMPTT r r /TR ~
+/TR > > TEMPT ~
+TEMPT d t TD ></td></t
+TD > > ANY ~
+ANY t t TEMPTT ~
+TEMPTT d d /TD ~
+/TD > > TEMPT ~
+TEMPT h t TH ></th></t
+TH > > ANY ~
+ANY t t TEMPTT ~
+TEMPTT h h /TH ~
+/TH > > TEMPT ~
+TEMPT / / /TABLE ~
+TEMPT > > /TABLE ~
 /TABLE t t /TABLE ~
 /TABLE a a /TABLE ~
 /TABLE b b /TABLE ~
