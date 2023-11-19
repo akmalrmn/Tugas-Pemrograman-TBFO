@@ -12,7 +12,6 @@ def HTMLToString(file_path):
                     content.replace_with('')
 
     output = str(soup)
+    output = ''.join(output.split())
 
     return output
-
-print(HTMLToString("a.html"))
