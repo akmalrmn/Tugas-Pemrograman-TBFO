@@ -1,4 +1,5 @@
 import os
+from parserOneString import HTMLToString
 
 class PDA:
     def __init__(self, file_path):
@@ -39,7 +40,7 @@ class PDA:
             self.transitions[state] = []
 
         configuration = (input_symbol, stack_symbol, push_stack, next_state)
-        configuration = tuple(s if s != "e" else "" for s in configuration)
+        configuration = tuple(s if s != "~" else "" for s in configuration)
 
         self.transitions[state].append(configuration)
     
@@ -133,7 +134,8 @@ class PDA:
         return moves
     
     def process_input(self):
-        self.start_input = input("Please enter your word:\n")
+        html_path = input("Masukkan file html: ")
+        self.start_input = HTMLToString(html_path)
         print("Checking word \"" + self.start_input + "\" ...")
 
         while self.start_input != "end":
@@ -149,6 +151,6 @@ class PDA:
             print("Checking word \"" + self.start_input + "\" ...")
 
 
-pda_instance = PDA("test.txt")
+pda_instance = PDA("pda.txt")
 pda_instance.process_input()
 
