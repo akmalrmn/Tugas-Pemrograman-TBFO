@@ -218,6 +218,7 @@ INPUT > > TRANSITION ~
 /TABLE > > TRANSITION ~
 ANY < < ANY ~
 ANY / / ANY ~
+ANY any < ANY <
 ANY t t /TITLE ~
 ANY s s /SCRIPT ~
 ANY p p /P ~
