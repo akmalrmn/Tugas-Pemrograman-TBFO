@@ -100,7 +100,7 @@ class PDA:
             for current in self.transitions[state]:
                 next_state, read_input, stack_symbol = current[3], current[0], current[1]
 
-                if (not read_input or ((input and input[0] == read_input) or( input[0] == ' ' and read_input == '#') )) and (not stack_symbol or (stack and stack[0] == stack_symbol)):
+                if (not read_input or (input and (input[0] == read_input or (input[0] == ' ' and read_input == '#') or (read_input == 'any') ) )) and (not stack_symbol or (stack and stack[0] == stack_symbol)):
                     new_input = input[1:] if read_input else input
                     new_stack = current[2] + stack[1:] if stack_symbol else current[2] + stack
                     moves.append((next_state, new_input, new_stack))
@@ -126,6 +126,7 @@ class PDA:
             print("Checking word \"" + self.start_input + "\" ...")
 
 
-pda_instance = PDA("pda.txt")
+pda_instance = PDA("pda99.txt")
+print(pda_instance.transitions)
 pda_instance.process_input()
 
