@@ -1,3 +1,20 @@
+TEMPHEAD < < TEMPHEAD ~
+TEMPHEAD / / /HEAD ~
+
+HEAD > > TEMPHEAD ~
+
+TEMPHEAD t / TITLE itle></title></
+/TITLE > > TEMPHEAD ~
+
+TEMPHEAD s / SCRIPT cript></script></
+/SCRIPT > > TEMPHEAD ~
+
+TEMPHEAD l / LINK ink/></
+
+
+
+
+
 TRANSITION < < TRANSITION ~
 
 BODY > > TRANSITION ~
@@ -50,6 +67,7 @@ TRANSITION t / TABLE able></table></
 /TABLE > > TRANSITION ~
 
 TRANSITION  / / /BODY ~
+
 
 
 
