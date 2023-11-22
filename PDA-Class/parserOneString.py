@@ -1,14 +1,9 @@
-import re
-from lxml import html
+from bs4 import BeautifulSoup
 
-def HTMLToString(filepath):
-    with open(filepath, 'r') as file:
-        html_content = file.read()
+html = open('a.html', 'r').read()
 
-    tree = html.fromstring(html_content)
+soup = BeautifulSoup(html, 'html.parser')
 
-    output = html.tostring(tree, method='html').decode().replace('\n', '')
+output = str(soup).replace('\n', '')
 
-    output = re.sub(r'>\s+<', '><', output)
-
-    return(output)
+print(output)
