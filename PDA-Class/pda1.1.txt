@@ -69,7 +69,7 @@ BODY b b BODY ~
 BODY o o BODY ~
 BODY d d BODY ~
 BODY y y BODY ~
-BODY > > TRANSITION ~ 
+BODY > > TRANSITION ~
 BODY / / /BODY ~
 /BODY b b /BODY ~
 /BODY o o /BODY ~
