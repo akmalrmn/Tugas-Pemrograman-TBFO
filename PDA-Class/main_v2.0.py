@@ -73,62 +73,37 @@ class PDA:
             print(i)
 
     def generate(self, state, input, stack, config):
-        total = 0
-
         if self.accept:
             return 0
 
         if self.accepted(state, input, stack):
-            self.accept = 1  # mark that the word is accepted so other tree nodes know and terminate
-
+            self.accept = 1
             self.accepted_config.extend(config)
-
             return 1
 
         moves = self.get_moves(state, input, stack)
-        if len(moves) == 0:
+        if not moves:
             return 0
 
+        total = 0
         for move in moves:
-            total += self.generate(move[0], move[1], move[2], config + [(move[0], move[1], move[2])])
-            
+            next_state, next_input, next_stack = move
+            total += self.generate(next_state, next_input, next_stack, config + [move])
+
         print(total)
         return total
-    
+
     def get_moves(self, state, input, stack):
         moves = []
 
-        for i in self.transitions:
-            if i != state:
-                continue
+        if state in self.transitions:
+            for current in self.transitions[state]:
+                next_state, read_input, stack_symbol = current[3], current[0], current[1]
 
-            #mencari semua kemungkinan next state dari state sekarang
-            for j in self.transitions[i]:
-                current = j
-                new = []
-
-                new.append(current[3]) #next state
-
-                # read symbol from input if we have one
-                if len(current[0]) > 0:
-                    if len(input) > 0 and input[0] == current[0]:
-                        new.append(input[1:]) #input di consume, dan ditambahkan sisanya ke new
-                    else: #input tidak cocok dengan transisi yang sekarang
-                        continue
-                else: #kasus epsilon dia inputnya tidak berubah
-                    new.append(input)
-
-                # read stack symbol
-                #TODO stack symbol hanya boleh 1 huruf
-                if len(current[1]) > 0: #cek top stack lebih dari 0
-                    if len(stack) > 0 and stack[0] == current[1]: #top of stack cocok
-                        new.append(current[2] + stack[1:])  #push ke stack
-                    else: #stack tidak cocok dengan transisi yang sekarang
-                        continue
-                else: #top of stack bebas 
-                    new.append(current[2] + stack) #pop nothing, push current[2] ke stack
-
-                moves.append(new)
+                if (not read_input or (input and input[0] == read_input)) and (not stack_symbol or (stack and stack[0] == stack_symbol)):
+                    new_input = input[1:] if read_input else input
+                    new_stack = current[2] + stack[1:] if stack_symbol else current[2] + stack
+                    moves.append((next_state, new_input, new_stack))
 
         print(moves)
         return moves
