@@ -1,37 +1,33 @@
 TEMPHEAD < < TEMPHEAD ~
 TEMPHEAD / / /HEAD ~
-
-HEAD > > TEMPHEAD ~
-
 TEMPHEAD t / TITLE itle></title></
-/TITLE > > TEMPHEAD ~
-
 TEMPHEAD s / SCRIPT cript></script></
-/SCRIPT > > TEMPHEAD ~
-
 TEMPHEAD l / LINK ink/></
-
-
-
-
-
+HEAD > > TEMPHEAD ~
+LINK > > TEMPHEAD ~
+TEMPHEAD < < TEMPHEAD ~
+/TITLE > > TEMPHEAD ~
+/SCRIPT > > TEMPHEAD ~
 TRANSITION < < TRANSITION ~
-
 BODY > > TRANSITION ~
-
+TRANSITION < < TRANSITION ~
 TRANSITION s / SCRIPT cript></script></
-/SCRIPT > > TRANSITION ~
-
 TRANSITION l / LINK ink/></
-LINK > > TRANSITION ~
-
 TRANSITION p / P ></p></
-/P > > TRANSITION ~
-
 TRANSITION e / EM m></em></
-/EM > > TRANSITION ~
-
 TRANSITION h / TEMPH </
+TRANSITION b / TEMPB ></
+TRANSITION s / TEMPS </
+TRANSITION d / DIV iv></div></
+TRANSITION a / TEMPA ></
+TRANSITION i / TEMPI </
+TRANSITION f / FORM orm></form></
+TRANSITION t / TABLE able></table></
+TRANSITION  / / /BODY ~
+/SCRIPT > > TRANSITION ~
+LINK > > TRANSITION ~
+/P > > TRANSITION ~
+/EM > > TRANSITION ~
 /H1 > > TRANSITION ~
 /H2 > > TRANSITION ~
 /H3 > > TRANSITION ~
@@ -39,101 +35,59 @@ TRANSITION h / TEMPH </
 /H5 > > TRANSITION ~
 /H6 > > TRANSITION ~
 HR > > TRANSITION ~ 
-
-TRANSITION b / TEMPB ></
 /B > > TRANSITION ~
 /BUTTON > > TRANSITION ~
 BR > > TRANSITION ~
-
-TRANSITION s / TEMPS </
 /STRONG > > TRANSITION ~
 /SMALL > > TRANSITION ~
-
-TRANSITION d / DIV iv></div></
 /DIV > > TRANSITION ~
-
-TRANSITION a / TEMPA ></
 /A > > TRANSITION ~
 /ABBR > > TRANSITION ~
-
-TRANSITION i / TEMPI </
 IMG > > TRANSITION ~
 INPUT > > TRANSITION ~
-
-TRANSITION f / FORM orm></form></
 /FORM > >  TRANSITION ~
-
-TRANSITION t / TABLE able></table></
 /TABLE > > TRANSITION ~
-
-TRANSITION  / / /BODY ~
-
-
-
-
-
 ANY < < ANY ~
 ANY / / ANY ~
-
-TITLE > > ANY ~
 ANY t t /TITLE ~
-
-SCRIPT > > ANY ~
 ANY s s /SCRIPT ~
-
-P > > ANY ~
 ANY p p /P ~
-
-EM > > ANY ~
 ANY e e /EM ~
-
-H1 > > ANY ~
 ANY h h /H1 ~
-
-H2 > > ANY ~
 ANY h h /H2 ~
-
-H3 > > ANY ~
 ANY h h /H3 ~
-
-H4 > > ANY ~
 ANY h h /H4 ~
-
-H5 > > ANY ~
 ANY h h /H5 ~
-
-H6 > > ANY ~
 ANY h h /H6 ~
-
-TEMPB > > ANY ~
 ANY b b /B ></b
-
-BUTTON > > ANY ~
 ANY b b /BUTTON ~
-
-STRONG > > ANY ~
 ANY s s /STRONG ~
-
-SMALL > > ANY ~
 ANY s s /SMALL ~
-
-DIV > > ANY ~
 ANY d d /DIV ~
-
-TEMPA > > ANY ~
 ANY a b /A ></b
-
-ABBR > > ANY ~
 ANY a a /ABBR ~
-
-FORM > > ANY ~
 ANY f f /FORM ~
-
+ANY t t TEMPTT ~
+ANY t t TEMPTT ~
+ANY t t TEMPTT ~
+TITLE > > ANY ~
+SCRIPT > > ANY ~
+P > > ANY ~
+EM > > ANY ~
+H1 > > ANY ~
+H2 > > ANY ~
+H3 > > ANY ~
+H4 > > ANY ~
+H5 > > ANY ~
+H6 > > ANY ~
+TEMPB > > ANY ~
+BUTTON > > ANY ~
+STRONG > > ANY ~
+SMALL > > ANY ~
+DIV > > ANY ~
+TEMPA > > ANY ~
+ABBR > > ANY ~
+FORM > > ANY ~
 TR > > ANY ~
-ANY t t TEMPTT ~
-
 TD > > ANY ~
-ANY t t TEMPTT ~
-
 TH > > ANY ~
-ANY t t TEMPTT ~
