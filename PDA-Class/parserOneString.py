@@ -11,6 +11,4 @@ def HTMLToString(filepath):
 
     output = re.sub(r'>\s+<', '><', output)
 
-    print(output)
-
-HTMLToString('a.html')
+    return(output)
