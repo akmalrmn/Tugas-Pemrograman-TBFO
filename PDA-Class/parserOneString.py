@@ -1,6 +1,6 @@
 from lxml import html
 
-def HTMLToString(filepath):
+def HTMLToString1(filepath):
     with open(filepath, 'r') as file:
         html_content = file.read()
 
@@ -15,7 +15,7 @@ def HTMLToString(filepath):
 
     return output
 
-def HTMLToString(file_path):
+def HTMLToString2(file_path):
     result = ""
     inTag = False
 
