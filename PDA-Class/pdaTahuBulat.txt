@@ -1,4 +1,4 @@
-MAIN HTML /HTML HEAD /HEAD BODY /BODY TEMPHEAD TRANSITION ANY P /P EM /EM TEMPH H1 /H1 H2 /H2 H3 /H3 H4 /H4 H5 /H5 H6 /H6 HR TEMPB BUTTON /BUTTON BR TEMPS STRONG /STRONG SMALL /SMALL DIV /DIV TEMPA A A/ ABBR /ABBR TEMPI IMG INPUT FORM /FORM TABLE /TABLE TEMPT TR /TR TD /TD TH /TH TEMPTT  
+MAIN HTML /HTML HEAD /HEAD BODY /BODY TEMPHEAD TRANSITION ANY P /P EM /EM TEMPH H1 /H1 H2 /H2 H3 /H3 H4 /H4 H5 /H5 H6 /H6 HR TEMPB BUTTON /BUTTON BR TEMPS STRONG /STRONG SMALL /SMALL DIV /DIV A A A/ ABBR /ABBR TEMPI IMG INPUT FORM /FORM TABLE /TABLE TEMPT TR /TR TD /TD TH /TH TEMPTT  
 < > / a b c d e f g h i j k l m n o p q r s t u v w x y z 1 2 3 4 5 6
 < > / a b c d e f g h i j k l m n o p q r s t u v w x y z 1 2 3 4 5 6 Z
 MAIN
@@ -203,17 +203,16 @@ DIV v v DIV ~
 /DIV d d /DIV ~
 /DIV i i /DIV ~
 /DIV v v /DIV ~
-TEMPA b > ABBR br></abbr>
-TEMPA # # TEMPA ~
-TEMPA ~ # TEMPA ~
-TEMPA h # TEMPA ref=()##
-TEMPA r r TEMPA ~
-TEMPA e e TEMPA ~
-TEMPA f f TEMPA ~
-TEMPA = = TEMPA ~
-TEMPA " ( TEMPA ~
-TEMPA " ) TEMPA ~
-TEMPA !" ) TEMPA )
+A # # A ~
+A ~ # A ~
+A h # A ref=()##
+A r r A ~
+A e e A ~
+A f f A ~
+A = = A ~
+A " ( A ~
+A " ) A ~
+A !" ) A )
 ABBR b b ABBR ~
 ABBR r r ABBR ~
 /ABBR b b /ABBR ~
@@ -341,13 +340,13 @@ TRANSITION < < TRANSITION ~
 TRANSITION s / SCRIPT cript##></script></
 TRANSITION l / LINK ink##rel=()/></
 TRANSITION p / P ></p></
-TRANSITION e / EM m></em></
+ANY e / EM m></em></
 TRANSITION h / TEMPH </
 TRANSITION b / TEMPB ></
-TRANSITION s / TEMPS </
+ANY s / TEMPS </
 TRANSITION d / DIV iv></div></
 TRANSITION / / /DIV ~
-TRANSITION a / TEMPA ##></
+TRANSITION a / A ##></
 TRANSITION i / TEMPI </
 TRANSITION f / FORM orm##></form></
 TRANSITION t / TABLE able></table></
@@ -356,7 +355,7 @@ TRANSITION ~ ~ DIV ~
 /SCRIPT > > TRANSITION ~
 LINK > > TRANSITION ~
 /P > > TRANSITION ~
-/EM > > TRANSITION ~
+/EM > > ANY ~
 /H1 > > TRANSITION ~
 /H2 > > TRANSITION ~
 /H3 > > TRANSITION ~
@@ -367,11 +366,11 @@ HR > > TRANSITION ~
 /B > > TRANSITION ~
 /BUTTON > > TRANSITION ~
 BR > > TRANSITION ~
-/STRONG > > TRANSITION ~
-/SMALL > > TRANSITION ~
+/STRONG > > ANY ~
+/SMALL > > ANY ~
 /DIV > > TRANSITION ~
 /A > > TRANSITION ~
-/ABBR > > TRANSITION ~
+/ABBR > > ANY ~
 IMG > > TRANSITION ~
 INPUT > > TRANSITION ~
 /FORM > >  TRANSITION ~
@@ -393,7 +392,7 @@ STRONG > > ANY ~
 SMALL > > ANY ~
 DIV > > DIV ~
 DIV < < TRANSITION ~
-TEMPA > > ANY ~
+A > > ANY ~
 ABBR > > ANY ~
 FORM > > ANY ~
 TR > > ANY ~
@@ -413,13 +412,17 @@ ANY h h /H3 ~
 ANY h h /H4 ~
 ANY h h /H5 ~
 ANY h h /H6 ~
-ANY b b /B ></b
+ANY b / B ></b></
+B > > ANY ~
+ANY b b /B ~
+/B > > ANY ~
 ANY b b /BUTTON ~
 ANY s s /STRONG ~
 ANY s s /SMALL ~
 ANY d d /DIV ~
 ANY a b /A ></b
 ANY a d /A ></d
+ANY a / ABBR bbr></abbr></
 ANY a a /ABBR ~
 ANY f f /FORM ~
 ANY t t TEMPTT ~
