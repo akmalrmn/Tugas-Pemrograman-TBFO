@@ -1,10 +1,12 @@
-from bs4 import BeautifulSoup
+from lxml import html
 
-def HTMLToString(file_path):
-    html = open(file_path, 'r').read()
+def HTMLToString(filepath):
+    with open(filepath, 'r') as file:
+        html_content = file.read()
 
-    soup = BeautifulSoup(html, 'html.parser')
+    parser = html.HTMLParser(remove_blank_text=True)
+    tree = html.fragments_fromstring(html_content, parser=parser)
 
-    output = str(soup).replace('\n', '')
+    output = ''.join(html.tostring(e, method='html').decode().replace('\n', '') for e in tree)
 
     return output
