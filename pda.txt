@@ -1,0 +1,53 @@
+HTML /HTML HEAD /HEAD BODY /BODY
+< > / a b c d e f g h i j k l m n o p q r s t u v w x y z
+< > / a b c d e f g h i j k l m n o p q r s t u v w x y z Z
+MAIN
+Z
+AcceptedState
+F
+MAIN < Z HTML html><head></head><body></body></html>Z
+HTML < < HTML ~
+HTML h h HTML ~
+HTML t t HTML ~
+HTML m m HTML ~
+HTML l l HTML ~
+HTML > > HEAD ~
+HTML / / /HTML ~
+/HTML h h /HTML ~
+/HTML t t /HTML ~
+/HTML m m /HTML ~
+/HTML l l /HTML ~
+/HTML > > /HTML ~
+/HTML ~ Z AcceptedState ~
+HEAD < < HEAD ~
+HEAD h h HEAD ~
+HEAD e e HEAD ~
+HEAD a a HEAD ~
+HEAD d d HEAD ~
+HEAD > > HEAD ~
+HEAD / / /HEAD ~
+/HEAD h h /HEAD ~
+/HEAD e e /HEAD ~
+/HEAD a a /HEAD ~
+/HEAD d d /HEAD ~
+/HEAD > > BODY ~
+BODY < < BODY ~
+BODY b b BODY ~
+BODY o o BODY ~
+BODY d d BODY ~
+BODY y y BODY ~
+BODY / / /BODY ~
+/BODY b b /BODY ~
+/BODY o o /BODY ~
+/BODY d d /BODY ~
+/BODY y y /BODY ~
+/BODY > > HTML ~
+BODY > > TRANSITION ~
+TRANSITION < < TRANSITION ~
+TRANSITION p / P ></p></
+P > > P ~
+P < < P ~
+P / / /P ~
+/P p p /P ~
+/P > > TRANSITION ~
+TRANSITION  / / /BODY ~
