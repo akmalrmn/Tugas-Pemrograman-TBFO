@@ -133,7 +133,6 @@ class PDA:
             print("Checking word \"" + self.start_input + "\" ...")
 
 
-pda_instance = PDA("pda99.txt")
+pda_instance = PDA("PDA-Class/pdaTahuBulat.txt")
 print(pda_instance.transitions)
 pda_instance.process_input()
-
