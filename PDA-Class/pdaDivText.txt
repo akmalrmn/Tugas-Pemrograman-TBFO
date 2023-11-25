@@ -1,4 +1,4 @@
-MAIN HTML /HTML HEAD /HEAD BODY /BODY TEMPHEAD TRANSITION ANY P /P EM /EM TEMPH H1 /H1 H2 /H2 H3 /H3 H4 /H4 H5 /H5 H6 /H6 HR TEMPB BUTTON /BUTTON BR TEMPS STRONG /STRONG SMALL /SMALL DIV /DIV A A A/ ABBR /ABBR TEMPI IMG INPUT FORM /FORM TABLE /TABLE TEMPT TR /TR TD /TD TH /TH TEMPTT  
+MAIN HTML /HTML HEAD /HEAD BODY /BODY TEMPHEAD TRANSITION ANY P /P EM /EM TEMPH H1 /H1 H2 /H2 H3 /H3 H4 /H4 H5 /H5 H6 /H6 HR TEMPB BUTTON /BUTTON BR TEMPS STRONG /STRONG SMALL /SMALL DIV /DIV A A A/ ABBR /ABBR TEMPI IMG INPUT FORM /FORM TABLE /TABLE TR TR /TR TD /TD TH /TH TEMPTT  
 < > / a b c d e f g h i j k l m n o p q r s t u v w x y z 1 2 3 4 5 6
 < > / a b c d e f g h i j k l m n o p q r s t u v w x y z 1 2 3 4 5 6 Z
 MAIN
@@ -26,6 +26,7 @@ HEAD e e HEAD ~
 HEAD a a HEAD ~
 HEAD d d HEAD ~
 HEAD # > ATTR #*N>
+HEAD ! h KOMEN 1123>T<h
 TEMPHEAD < < TEMPHEAD ~
 TEMPHEAD / / /HEAD ~
 TEMPHEAD t / TITLE itle></title></
@@ -384,29 +385,31 @@ TABLE b b TABLE ~
 TABLE l l TABLE ~
 TABLE e e TABLE ~
 TABLE # > ATTR #*C>
-TABLE > > TEMPT ~
-TEMPT < < TEMPT ~
-TEMPT t / TEMPT r></tr></
-TEMPT r r TEMPT ~
-TEMPT > > TEMPTT ~
+TABLE > > TR ~
+TR < < TR ~
+TR t / TR r></tr></
+TR r r TR ~
+TR > > TEMPTT ~
 TEMPTT < < TEMPTT ~
 TEMPTT t / TEMPTT ~
 TEMPTT h t TH ></th></t
 TH > > ANY ~
+TH # > ATTR #*Y>
 ANY t t /TH ~
 /TH h h /TH ~
 /TH > > TEMPTT ~
 TEMPTT d t TD ></td></t
 TD > > ANY ~
+TD # > ATTR #*Y>
 ANY t t /TD ~
 /TD d d /TD ~
 /TD > > TEMPTT ~
 TEMPTT / / /TR ~
 /TR t t /TR ~
 /TR r r /TR ~
-/TR > > TEMPT ~
-TEMPT / / /TABLE ~
-TEMPT > > /TABLE ~
+/TR > > TR ~
+TR / / /TABLE ~
+TR > > /TABLE ~
 /TABLE t t /TABLE ~
 /TABLE a a /TABLE ~
 /TABLE b b /TABLE ~
@@ -518,9 +521,6 @@ ANY a d /A ></d
 ANY a / ABBR bbr></abbr></
 ANY a a /ABBR ~
 ANY f f /FORM ~
-ANY t t TEMPTT ~
-ANY t t TEMPTT ~
-ANY t t TEMPTT ~
 ATTR # # ATTR ~
 ATTR = = ATTR ~
 ATTR " ( ATTR ~
@@ -574,3 +574,4 @@ ATTR ~ C TABLE ~
 ATTR ~ Q TR ~
 ATTR ~ X TD ~
 ATTR ~ Y TH ~
+KOMEN 

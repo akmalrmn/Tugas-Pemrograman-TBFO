@@ -104,7 +104,7 @@ class PDA:
                                        ((input[0] == read_input) or 
                                         (input[0] == ' ' and read_input == '#') or 
                                         (read_input == 'any') or 
-                                        (read_input[0] == '!' and input[0] != read_input[1])))) and \
+                                        (read_input[0] == '!' and len(read_input) == 2 and input[0] != read_input[1])))) and \
                     (not stack_symbol or (stack and stack[0] == stack_symbol)):
 
                     new_input = input[1:] if read_input else input
