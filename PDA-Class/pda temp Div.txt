@@ -257,6 +257,7 @@ INPUT > > DIV ~
 /FORM > >  DIV ~
 /TABLE > > DIV ~
 /DIV > > TRANSITION ~
+/DIV > > DIV ~
 /DIV d d /DIV ~
 /DIV i i /DIV ~
 /DIV v v /DIV ~
