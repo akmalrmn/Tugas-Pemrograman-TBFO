@@ -8,10 +8,8 @@ def HTMLToString(file_path):
 
         for char in content:
             if char == '<':
-                result += char
                 inTag = True
             elif char == '>':
-                result += char
                 inTag = False
             elif not inTag and char in [' ', '\t', '\n']:
                 continue
@@ -24,6 +22,8 @@ def HTMLToString(file_path):
                 else:
                     spasi = False
 
-                result += char
+            result += char
 
     return result
+
+print(HTMLToString('a.html'))
