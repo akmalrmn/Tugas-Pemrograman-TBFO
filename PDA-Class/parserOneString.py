@@ -1,6 +1,7 @@
 def HTMLToString(file_path):
     result = ""
     inTag = False
+    spasi = False
 
     with open(file_path, 'r') as file:
         content = file.read()
@@ -15,6 +16,14 @@ def HTMLToString(file_path):
             elif not inTag and char in [' ', '\t', '\n']:
                 continue
             else:
+                if char == ' ':
+                    if spasi:
+                        continue
+                    else:
+                        spasi = True
+                else:
+                    spasi = False
+
                 result += char
 
     return result
