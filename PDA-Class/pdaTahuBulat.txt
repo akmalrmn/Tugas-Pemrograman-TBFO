@@ -29,7 +29,7 @@ HEAD # > ATTR #*N>
 TEMPHEAD < < TEMPHEAD ~
 TEMPHEAD / / /HEAD ~
 TEMPHEAD t / TITLE itle></title></
-TEMPHEAD s / SCRIPTH cript##></script></
+TEMPHEAD s / SCRIPTH cript></script></
 TEMPHEAD l / LINKH ink#rel=()></
 HEAD > > TEMPHEAD ~
 LINKH > > TEMPHEAD ~
