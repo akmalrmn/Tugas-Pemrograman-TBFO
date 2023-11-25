@@ -134,5 +134,4 @@ class PDA:
 
 
 pda_instance = PDA("PDA-Class/pdaTahuBulat.txt")
-print(pda_instance.transitions)
 pda_instance.process_input()
