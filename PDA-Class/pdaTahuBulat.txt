@@ -120,9 +120,12 @@ LINK i i LINK ~
 LINK n n LINK ~
 LINK k k LINK ~
 LINK # # LINK ~
-LINK ~ # LINK ~
-LINK # / LINK #/
-LINK h # LINK ref=()##
+LINK # > LINK $>
+LINK ~ $ LINK ~
+LINK # $ LINK $
+LINK # r LINK #r
+LINK h $ LINK ref=()
+LINK h r LINK ref=()#r
 LINK r r LINK ~
 LINK e e LINK ~
 LINK f f LINK ~
@@ -359,7 +362,7 @@ TRANSITION < < TRANSITION ~
 BODY > > TRANSITION ~
 TRANSITION < < TRANSITION ~
 TRANSITION s / SCRIPT cript##></script></
-TRANSITION l / LINK ink##rel=()></
+TRANSITION l / LINK ink#rel=()></
 TRANSITION p / P ></p></
 ANY e / EM m></em></
 TRANSITION h / TEMPH </
@@ -372,7 +375,7 @@ TRANSITION i / TEMPI </
 TRANSITION f / FORM orm##></form></
 TRANSITION t / TABLE able></table></
 TRANSITION / / /BODY ~
-TRANSITION ~ ~ DIV ~
+TRANSITION ~ < DIV <
 /SCRIPT > > TRANSITION ~
 LINK > > TRANSITION ~
 /P > > TRANSITION ~
