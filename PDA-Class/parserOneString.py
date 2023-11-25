@@ -2,6 +2,7 @@ def HTMLToString(file_path):
     result = ""
     inTag = False
     spasi = False
+    text = False
 
     with open(file_path, 'r') as file:
         content = file.read()
@@ -11,6 +12,7 @@ def HTMLToString(file_path):
                 inTag = True
             elif char == '>':
                 inTag = False
+                text = False
             elif not inTag and char in [' ', '\t', '\n']:
                 continue
             else:
@@ -21,9 +23,13 @@ def HTMLToString(file_path):
                         spasi = True
                 else:
                     spasi = False
+            
+            if text and not inTag and (char not in ["<", ">"]):
+                continue
+
+            if not inTag and (char not in ["<", ">"]):
+                text= True
 
             result += char
 
     return result
-
-print(HTMLToString('a.html'))
