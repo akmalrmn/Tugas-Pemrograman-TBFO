@@ -222,6 +222,9 @@ SMALL l l SMALL ~
 DIV i i DIV ~
 DIV v v DIV ~
 DIV # > ATTR #*D>
+DIV !< < ANYDIV <
+ANYDIV !< < ANYDIV < 
+ANYDIV ~ < DIV < 
 /DIV d d /DIV ~
 /DIV i i /DIV ~
 /DIV v v /DIV ~
@@ -393,7 +396,6 @@ TRANSITION i / TEMPI </
 TRANSITION f / FORM orm></form></
 TRANSITION t / TABLE able></table></
 TRANSITION / / /BODY ~
-TRANSITION ~ < DIV <
 /SCRIPT > > TRANSITION ~
 LINK > > TRANSITION ~
 /P > > TRANSITION ~
