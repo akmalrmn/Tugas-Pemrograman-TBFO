@@ -1,6 +1,19 @@
 import os, sys
 from htmlstring import HTMLToString
 
+class Color:
+    PURPLE = '\033[95m'
+    CYAN = '\033[96m'
+    DARKCYAN = '\033[36m'
+    BLUE = '\033[94m'
+    GREEN = '\033[92m'
+    YELLOW = '\033[93m'
+    RED = '\033[91m'
+    BOLD = '\033[1m'
+    UNDERLINE = '\033[4m'
+    END = '\033[0m'
+    ORANGE = '\033[38;5;208m'
+
 class PDA:
     def __init__(self, file_path):
         """
@@ -63,7 +76,7 @@ class PDA:
         Returns:
             bool: True jika konfigurasi diterima, False jika tidak.
         """
-        if len(input) > 0:
+        if input is None or len(input) > 0:
             return False
 
         if (self.type == "E" and len(stack) == 0) or (self.type == "F" and current_state in self.acceptable_states):
@@ -76,9 +89,42 @@ class PDA:
         Menampilkan pesan "Accepted" jika konfigurasi diterima, atau "Syntax Error" jika tidak.
         """
         if self.accept:
-            print("Accepted")
+            print(f"""{Color.GREEN}
+                       ..........  .                    
+              =@@@....................@@@=              
+   .. ..    @@............................@@            
+   ...   @@.......:..........:.:.......:.....@@         
+   .   @@.................:.......:.:::::......@@   .   
+      @........:::.:::..::::..::::::::::.::::....@   .  
+    @@.....:......................................@@  . 
+   @@...............@@..........@@....:............@@   
+  @*...........::..@@@#........@@@=.................*@  
+ @%...:..:::.......@@@@........@@@@..................*@ 
+ @......:..........@@@@...:....@@@@.....:.......::....@ 
+ @.................@@@#........@@@=.:...:.............@ 
+=........:..........@@..........@@.....................:
+%......::::............................::::............*
+*.....:::......:.......................................=
+*........................................::............=
+%.......@..................::..................@.......*
+=.......@......................................@.......:
+ @......@@...........:........................@@......@ 
+ @....:..@@..............................:...@@.......@ 
+ @%...:...@@...............::...:...........@@.......*@ 
+  @+..:....@@@............................@@@.......+@  
+   @@........@@@.................:......@@@........@@   
+    @@...::....@@@@..................@@@@.........@@    
+      @....:......@@@@@@@@@@@@@@@@@@@@.....:.....@   .. 
+       @@.....:.......#@@@@@@@@@@+.......::....@@     . 
+         @@.....::....................:......@@         
+       .    @@............................@@            
+              =@@%....................%@@=              
+                    .  ..........  .                                           
+            {Color.END}""")
+            print(f"{Color.GREEN}{Color.BOLD}Accepted{Color.END}")
+            print(f"{Color.GREEN}Yay! Syntax HTML kamu benar! :D{Color.END}\n")
         else:
-            print("Syntax Error")
+            print(f"{Color.RED}{Color.BOLD}Syntax Error{Color.END}\n")
         
         self.reset()
 
@@ -163,19 +209,47 @@ class PDA:
         """
         Memproses input dari pengguna dan menjalankan PDA.
         """
+        print(f"""{Color.ORANGE}
+  +++++++++++++++++++++++++++++++++++++  
+  +++++++++++++++++++++++++++++++++++++  
+  +++++++++++++++++++++++++++++++++++++  
+  ++++++++++++++++++++++++++++++++++++   
+   ++++++:...........          .++++++   
+   ++++++:...........          .++++++   
+   ++++++-....==================++++++   
+   +++++++....=+++++++++++++++++++++++   
+   +++++++....-+++++++++++++++++++++++   
+    ++++++...........         .++++++    
+    ++++++:..........         :++++++    
+    +++++++===============.   :++++++    
+    +++++++====++++++++++=    -++++++    
+    ++++++=....++++++++++-   .+++++++    
+    +++++++....-++++++++=:   .+++++++    
+     ++++++..........        .++++++     
+     ++++++=:........       .=++++++     
+     +++++++++++++-:.::=++++++++++++     
+     +++++++++++++++++++++++++++++++     
+     +++++++++++++++++++++++++++++++     
+         +++++++++++++++++++++++         
+               +++++++++++                               
+        {Color.END}""", end='\n')
         html_path = input("Masukkan file html: ")
         self.start_input = HTMLToString(html_path)
 
         while html_path != "exit":
-            if not self.generate(self.start_state, self.start_input, self.bottom_stack,
-                                    [(self.start_state, self.start_input, self.bottom_stack)]):
-                self.finish()
-            else:
-                # self.print_config(self.accepted_config)
-                self.finish()
-
-            html_path = input("Masukkan file html: ")
-            self.start_input = HTMLToString(html_path)
+            try:
+                if not self.generate(self.start_state, self.start_input, self.bottom_stack,
+                                        [(self.start_state, self.start_input, self.bottom_stack)]):
+                    self.finish()
+                else:
+                    # self.print_config(self.accepted_config)
+                    self.finish()
+            except FileNotFoundError:
+                print(f"Error: File tidak ditemukan - {html_path}")
+            finally:
+                html_path = input("Masukkan file html: ")
+                if html_path != "exit":
+                    self.start_input = HTMLToString(html_path)
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
@@ -184,4 +258,3 @@ if __name__ == "__main__":
         file_path = sys.argv[1]
         pda = PDA(file_path)
         pda.process_input()
-
