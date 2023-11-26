@@ -31,5 +31,4 @@ python main.py pda/pdaDivFormText.txt
 | 13522163 | Atqiya Haydar Luqman | [LinkedIn](https://www.linkedin.com/in/atqiyahaydar/) |
 
 ## Lampiran
-1. [Laporan](https://docs.google.com/document/d/1dIhHgToJlP1HK9B_9t39FAgADO7vi_0xOcfP5FIswQ0/edit?usp=sharing)
-2. [Diagram](https://miro.com/app/board/uXjVNMb4uhY=/)
+1. [Diagram](https://miro.com/app/board/uXjVNMb4uhY=/)
