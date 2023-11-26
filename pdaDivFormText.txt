@@ -235,6 +235,10 @@ DIV f / FORM orm></form></
 DIV t / TABLE able></table></
 DIV / / /DIV ~
 DIV d / DIV iv></div></
+DIV e / EM m></em></
+DIV b / B ></b></
+DIV s / TEMPS </
+DIV a / ABBR bbr></abbr></
 DIV ! / KOMEN 1123>D/
 ANYDIV !< < ANYDIV <
 ANYDIV ~ < DIV <
@@ -389,6 +393,10 @@ FORM d / DIV iv></div></
 FORM t / TABLE able></table></
 FORM / / /FORM ~
 FORM f / FORM orm></form></
+FORM e / EM m></em></
+FORM b / B ></b></
+FORM s / TEMPS </
+FORM a / ABBR bbr></abbr></
 FORM ! / KOMEN 1123>F/
 ANYFORM !< < ANYFORM <
 ANYFORM ~ < FORM <
@@ -470,6 +478,8 @@ TRANSITION / / /BODY ~
 LINK > > TRANSITION ~
 /P > > TRANSITION ~
 /EM > > ANY ~
+/EM > > DIV ~
+/EM > > FORM ~
 /H1 > > TRANSITION ~
 /H2 > > TRANSITION ~
 /H3 > > TRANSITION ~
@@ -482,9 +492,15 @@ HR > > TRANSITION ~
 BR > > TRANSITION ~
 BR # > ATTR #*R>
 /STRONG > > ANY ~
+/STRONG > > DIV ~
+/STRONG > > FORM ~
 /SMALL > > ANY ~
+/SMALL > > DIV ~
+/SMALL > > FORM ~
 /A > > TRANSITION ~
 /ABBR > > ANY ~
+/ABBR > > DIV ~
+/ABBR > > FORM ~
 IMG > > TRANSITION ~
 IMG # > ATTR #*G>
 INPUT > > TRANSITION ~
@@ -541,6 +557,8 @@ B > > ANY ~
 B # > ATTR #*B>
 ANY b b /B ~
 /B > > ANY ~
+/B > > DIV ~
+/B > > FORM ~
 ANY b b /BUTTON ~
 ANY s s /STRONG ~
 ANY s s /SMALL ~
