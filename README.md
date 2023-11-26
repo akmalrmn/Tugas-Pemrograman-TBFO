@@ -23,9 +23,12 @@ python main.py pda.txt
 python main.py pdaDivFormText.txt
 ```
 
-## Dibuat oleh:
+## Dibuat oleh
 | NIM | Nama | Linkedin |
 | :---: | :---: | :---: |
 | 13522122 | Maulvi Ziadinda Maulana | [LinkedIn](https://www.linkedin.com/in/maulvi-ziadinda-maulana-02b1a5225/) |
 | 13522161 | Mohamad Akmal Ramadan | [LinkedIn](https://www.linkedin.com/in/akmalrmn/) |
 | 13522163 | Atqiya Haydar Luqman | [LinkedIn](https://www.linkedin.com/in/atqiyahaydar/) |
+
+## Lampiran
+[LinkedIn](https://docs.google.com/document/d/1dIhHgToJlP1HK9B_9t39FAgADO7vi_0xOcfP5FIswQ0/edit)
