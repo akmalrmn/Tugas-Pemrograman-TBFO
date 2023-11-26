@@ -497,6 +497,7 @@ ATTR y y ATTR ~
 ATTR l l ATTR ~
 ATTR e e ATTR ~
 ATTR c # ATTR lass=()
+ATTR c $ ATTR lass=()
 ATTR a a ATTR ~
 ATTR s s ATTR ~
 ATTR ~ * ATTR ~
