@@ -517,6 +517,7 @@ ATTR ~ * ATTR ~
 ATTR ~ $ ATTR ~
 ATTR # $ ATTR $
 ATTR # * ATTR $*
+ATTR # * ATTR #*
 ATTR ~ D DIV ~
 ATTR ~ L HTML ~
 ATTR ~ N HEAD ~

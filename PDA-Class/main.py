@@ -1,5 +1,5 @@
 import os
-from parserOneString import HTMLToString
+from htmlstring import HTMLToString
 
 class PDA:
     def __init__(self, file_path):

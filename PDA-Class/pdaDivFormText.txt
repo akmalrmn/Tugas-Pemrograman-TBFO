@@ -27,7 +27,7 @@ HEAD e e HEAD ~
 HEAD a a HEAD ~
 HEAD d d HEAD ~
 HEAD # > ATTR #*N>
-HEAD ! h KOMEN 1123>T<Hh
+HEAD ! h KOMEN 1123>Hh
 TEMPHEAD < < TEMPHEAD ~
 TEMPHEAD / / /HEAD ~
 TEMPHEAD t / TITLE itle></title></
@@ -240,6 +240,7 @@ DIV f / FORM orm></form></
 DIV t / TABLE able></table></
 DIV / / /DIV ~
 DIV d / DIV iv></div></
+DIV ! / KOMEN 1123>D/
 ANYDIV !< < ANYDIV <
 ANYDIV ~ < DIV <
 /SCRIPT > > DIV ~
@@ -395,6 +396,7 @@ FORM d / DIV iv></div></
 FORM t / TABLE able></table></
 FORM / / /FORM ~
 FORM f / FORM orm></form></
+FORM ! / KOMEN 1123>F/
 ANYFORM !< < ANYFORM <
 ANYFORM ~ < FORM <
 /SCRIPT > > FORM ~
@@ -622,3 +624,5 @@ KOMEN < T HTML ~
 KOMEN < B BODY ~
 KOMEN < M TEMPHEAD ~
 KOMEN < S TRANSITION ~
+KOMEN < D DIV ~
+KOMEN < F FORM ~
