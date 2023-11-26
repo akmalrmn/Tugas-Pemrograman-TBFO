@@ -1,7 +1,6 @@
 def HTMLToString(file_path):
     result = ""
-    inTag = False
-    spasi = False
+    tagStack = []
     text = False
 
     with open(file_path, 'r') as file:
@@ -9,11 +8,11 @@ def HTMLToString(file_path):
 
         for char in content:
             if char == '<':
-                inTag = True
+                tagStack.append(char)
             elif char == '>':
-                inTag = False
+                tagStack.pop()
                 text = False
-            elif not inTag and char in [' ', '\t', '\n']:
+            elif len(tagStack) == 0 and char in [' ', '\t', '\n']:
                 continue
             else:
                 if char == ' ':
@@ -24,10 +23,10 @@ def HTMLToString(file_path):
                 else:
                     spasi = False
             
-            if text and not inTag and (char not in ["<", ">"]):
+            if text and len(tagStack) == 0 and (char not in ["<", ">"]):
                 continue
 
-            if not inTag and (char not in ["<", ">"]):
+            if len(tagStack) == 0 and (char not in ["<", ">"]):
                 text= True
 
             result += char
