@@ -26,6 +26,6 @@ python main.py pdaDivFormText.txt
 ## Dibuat oleh:
 | NIM | Nama | Linkedin |
 | :---: | :---: | :---: |
-| 13522122 | Maulvi Ziadinda Maulana | [LinkedIn](https://www.linkedin.com/in/maulvizm/) |
+| 13522122 | Maulvi Ziadinda Maulana | [LinkedIn](https://www.linkedin.com/in/maulvi-ziadinda-maulana-02b1a5225/) |
 | 13522161 | Mohamad Akmal Ramadan | [LinkedIn](https://www.linkedin.com/in/akmalrmn/) |
 | 13522163 | Atqiya Haydar Luqman | [LinkedIn](https://www.linkedin.com/in/atqiyahaydar/) |
