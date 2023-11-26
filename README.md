@@ -15,12 +15,12 @@ Dibutuhkan sebuah program pendeteksi error untuk HTML. Oleh sebab itu, implement
 
 Buka folder projek ini pada terminal lalu ketik command berikut:
 ```shell
-python main.py pda.txt
+python main.py pda/pda.txt
 ```
 
 **Note**: Apabila pada content tag div terdapat teks, ketik command dengan file PDA yang berbeda, yaitu:
 ```shell
-python main.py pdaDivFormText.txt
+python main.py pda/pdaDivFormText.txt
 ```
 
 ## Dibuat oleh
