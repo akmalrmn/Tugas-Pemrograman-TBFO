@@ -394,7 +394,7 @@ FORM t / TABLE able></table></
 FORM / / /FORM ~
 FORM f / FORM orm></form></
 FORM e / EM m></em></
-FORM b / b ></b></
+FORM b / B ></b></
 FORM s / TEMPS </
 FORM a / ABBR bbr></abbr></
 FORM ! / KOMEN 1123>F/
