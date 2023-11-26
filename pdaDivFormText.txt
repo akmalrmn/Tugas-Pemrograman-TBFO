@@ -541,6 +541,7 @@ TD # > ATTR #*X>
 ANY < < ANY ~
 ANY / / ANY ~
 ANY !< < ANY <
+ANY ! / KOMEN 1123>Y</
 ANY t t /TITLE ~
 ANY s s /SCRIPTH ~
 ANY s s /SCRIPT ~
@@ -632,3 +633,4 @@ KOMEN < M TEMPHEAD ~
 KOMEN < S TRANSITION ~
 KOMEN < D DIV ~
 KOMEN < F FORM ~
+KOMEN ~ Y ANY ~

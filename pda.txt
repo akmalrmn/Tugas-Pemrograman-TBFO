@@ -459,6 +459,7 @@ ABBR # > ATTR #*&>
 ANY < < ANY ~
 ANY / / ANY ~
 ANY !< < ANY <
+ANY ! / KOMEN 1123>Y</
 ANY t t /TITLE ~
 ANY s s /SCRIPTH ~
 ANY s s /SCRIPT ~
@@ -546,3 +547,4 @@ KOMEN < T HTML ~
 KOMEN < B BODY ~
 KOMEN < M TEMPHEAD ~
 KOMEN < S TRANSITION ~
+KOMEN ~ Y ANY ~
