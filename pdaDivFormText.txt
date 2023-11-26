@@ -436,7 +436,6 @@ ANY t t /TH ~
 /TH > > TEMPTT ~
 TEMPTT d t TD ></td></t
 TD > > ANY ~
-TD # > ATTR #*Y>
 ANY t t /TD ~
 /TD d d /TD ~
 /TD > > TEMPTT ~
@@ -539,7 +538,7 @@ ANY h h /H5 ~
 ANY h h /H6 ~
 ANY b / B ></b></
 B > > ANY ~
-b # > ATTR #*B>
+B # > ATTR #*B>
 ANY b b /B ~
 /B > > ANY ~
 ANY b b /BUTTON ~

@@ -444,7 +444,6 @@ ANY t t /TH ~
 /TH > > TEMPTT ~
 TEMPTT d t TD ></td></t
 TD > > ANY ~
-TD # > ATTR #*Y>
 ANY t t /TD ~
 /TD d d /TD ~
 /TD > > TEMPTT ~
